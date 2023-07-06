@@ -7,6 +7,9 @@ html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
 }
+body {
+  position: relative;
+}
 .container {
   margin: 0 auto;
   max-width: 1200px;
@@ -64,6 +67,8 @@ html {
 }
 .overlay-container {
   position: absolute;
+  top: 0;
+  right: 0;
   opacity: 0;
   visibility: hidden;
 }
@@ -321,13 +326,11 @@ html {
   .overlay-container.open {
     opacity: 1;
     visibility: visible;
-    transform: translateX(0);
   }
 
   .overlay-container {
     visibility: hidden;
-    transform: translateX(100%);
-    position: relative;
+
     opacity: 0;
 
     padding-top: 15rem;
